@@ -1,6 +1,7 @@
 extends CanvasLayer
-
+var is_timer
 var segundos = 55
+
 var minutos = 0 
 var decimales = 0
 var formated_time = ''
@@ -27,7 +28,10 @@ func _on_button_pressed():
 func _on_timer_timeout():
 	update_timer()
 func _on_stop_pressed():
-	$Timer.stop()
+	if $Timer.stop()
+	
+()
+	%Timer.restart()
 func _on_restart_pressed():
 	segundos = 0
 	minutos = 0
