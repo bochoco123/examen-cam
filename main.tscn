@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdbqdld7a4aei"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_qpgbn"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_qpgbn")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 433.0
+offset_top = 252.0
+offset_right = 497.0
+offset_bottom = 275.0
+text = "00:00:00"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 497.0
+offset_top = 314.0
+offset_right = 558.0
+offset_bottom = 345.0
+text = "button
+"
+
+[node name="stop" type="Button" parent="."]
+offset_left = 648.0
+offset_top = 317.0
+offset_right = 656.0
+offset_bottom = 325.0
+text = "stop
+"
+
+[node name="restart" type="Button" parent="."]
+offset_left = 327.0
+offset_top = 321.0
+offset_right = 388.0
+offset_bottom = 352.0
+text = "restart
+"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="stop" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
